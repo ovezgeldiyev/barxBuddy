@@ -1,0 +1,346 @@
+.intro {
+  padding: 30px 0;
+  &__inner {
+    &-title {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      &:hover {
+        opacity: 1;
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        width: 100%;
+        transition: 0.3s ease;
+      }
+    }
+    &-article {
+      margin-bottom: 35px;
+      h2 {
+        margin-bottom: 20px;
+      }
+      & > p {
+        margin-bottom: 20px;
+        &:last-child {
+          margin: 0;
+        }
+        b {
+          font-weight: 700;
+        }
+        a {
+          color: $primary;
+          font-weight: 700;
+          &:hover {
+            opacity: 1;
+            color: $primary-dark;
+          }
+        }
+        span {
+          width: 21px;
+          height: 21px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 4px;
+          img {
+            width: 100%;
+            transform: translateY(3px);
+          }
+        }
+      }
+      .button {
+        margin-bottom: 24px;
+      }
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      margin: 0 -10px;
+    }
+    &-box {
+      background-color: #f0f8ff;
+      border-radius: 3px;
+      padding: 20px 28px;
+      border: 2px solid #ff0000;
+      margin: 5px 0 30px;
+      text-align: center;
+      p {
+        margin: 0 !important;
+      }
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    ol {
+      padding-left: 20px;
+      margin-bottom: 30px;
+      li {
+        a {
+          color: $primary;
+          font-weight: 700;
+          &:hover {
+            opacity: 1;
+            color: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+  &Blog {
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      &-stars {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        span {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 2px;
+          &:last-child {
+            margin: 0;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+      p {
+        color: $gray;
+        span {
+          margin: 0 7px;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+    }
+    &__item {
+      width: calc(20% - 3px);
+      height: 30px;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $black;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        opacity: 1;
+        transform: translateY(-5px);
+      }
+      &.facebook {
+        background-color: #4267b2;
+      }
+      &.twitter {
+        background-color: $black;
+      }
+      &.messenger {
+        background-color: #448aff;
+      }
+      &.whatsapp {
+        background-color: #25d366;
+      }
+      &.pinterest {
+        background-color: #cb2027;
+      }
+      img {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+  &Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    width: calc(50% - 20px);
+    margin: 50px 10px;
+    &__icon {
+      width: 75px;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 80px;
+      img {
+        width: 100%;
+      }
+    }
+    h6 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 100%;
+    }
+  }
+  &Review {
+    padding: 30px 0;
+    &__item {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 40px 20px;
+      &-name {
+        display: flex;
+        align-items: center;
+      }
+      &-avatar {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+        img {
+          @include fullImage;
+        }
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    .slick {
+      &-track {
+        display: flex !important;
+      }
+      &-slide {
+        height: unset !important;
+      }
+      &-arrow {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 60%;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 13px;
+          height: 13px;
+          border-top: 2px solid $black;
+          border-right: 2px solid $black;
+          content: "";
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+      &-next {
+        right: 0;
+      }
+      &-prev {
+        left: 0;
+        &::before {
+          transform: translate(-50%, -50%) rotate(-135deg);
+        }
+      }
+    }
+    h4 {
+      margin-bottom: 30px;
+    }
+  }
+}
+// 930px
+@mixin intro-md-lg {
+  .intro {
+    padding: 30px 0;
+    &Review {
+      padding: 0;
+    }
+  }
+}
+// 540px
+@mixin intro-xsm-sm {
+  .intro {
+    &__inner {
+      &-title {
+        p {
+          margin-bottom: 20px;
+        }
+      }
+      &-article {
+        margin-bottom: 24px;
+        h2 {
+          margin-bottom: 15px;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+      &-image {
+        margin-bottom: 15px;
+      }
+      &-row {
+        margin: 0;
+        padding: 15px 0;
+      }
+      &-box {
+        padding: 10px;
+      }
+      h1 {
+        margin-bottom: 15px;
+      }
+    }
+    &Blog {
+      &__top {
+        p {
+          span {
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+      &__item {
+        width: calc(25% - 3px);
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 25px 0;
+      &__icon {
+        margin-bottom: 40px;
+      }
+      h6 {
+        margin-bottom: 10px;
+      }
+    }
+    &Review {
+      &__item {
+        padding: 0 30px;
+
+      }
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

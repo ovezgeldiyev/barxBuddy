@@ -1,0 +1,119 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include intro-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+//   @include intro-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+//   @include intro-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+//   @include intro-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+//   @include intro-lg-xlg;
+}
+// 930px
+@include md-lg {
+  .auto__container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .button {
+    font-size: 25px;
+    padding: 12px;
+    &.sm {
+      font-size: 17px;
+      padding: 12px 6px;
+    }
+  }
+  .main {
+    &__inner {
+      padding-bottom: 60px;
+    }
+    &__side {
+      width: 215px;
+    }
+    &__content {
+      width: calc(100% - 240px);
+    }
+  }
+  @include header-md-lg;
+  @include intro-md-lg;
+}
+// 750px
+@include sm-md {
+  .main {
+    &__inner {
+      padding-bottom: 40px;
+    }
+    &__side {
+      display: none;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+//   @include intro-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 26px;
+    line-height: 130%;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    &.big {
+        font-size: 20px;
+    }
+  }
+  p {
+    &.italic {
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &.ex {
+        font-size: 16px;
+    }
+  }
+  body {
+    font-size: 18px;
+  }
+  .button {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    border-width: 3px;
+  }
+  @include header-xsm-sm;
+  @include intro-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+//   @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include intro-xxxsm-xxsm;
+}

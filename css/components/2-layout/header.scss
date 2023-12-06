@@ -1,0 +1,60 @@
+.header {
+  border-bottom: 1px solid #ccc;
+  &__inner {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 205px;
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      span {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin header-md-lg {
+  .header {
+    &__inner {
+      padding: 10px 0;
+      &-logo {
+        width: 170px;
+      }
+    }
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    &__inner {
+      justify-content: center;
+      padding: 13px 0;
+      &-logo {
+        width: 195px;
+      }
+      h4 {
+        display: none;
+      }
+    }
+  }
+}
